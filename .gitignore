@@ -1,11 +1,3 @@
-__pycache__/
-.vscode/
-env/
-*.pyc
-*.so
-build/
-dist/
-pyprofyler.egg-info/
 **/__pycache__/
 **/.vscode/
 **/env/
@@ -13,4 +5,5 @@ pyprofyler.egg-info/
 **/*.so
 **/build/
 **/dist/
-**/pyprofyler.egg-info/
+**/*.egg-info/
+**/*.jsonl

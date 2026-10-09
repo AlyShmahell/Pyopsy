@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pyopsy</title>
+  <link rel="stylesheet" href="/page.css">
+</head>
+<body>
+  <button type="button" id="support-open" class="support-open" aria-label="Support Pyopsy">❤️</button>
+  <header>
+    <p class="mark">Pyopsy</p>
+    <h1>Live session</h1>
+  </header>
+  <section id="process-box" hidden>
+    <h2>Process</h2>
+    <label>
+      Process
+      <select id="process-select"></select>
+    </label>
+  </section>
+  <section>
+    <h2>Summary</h2>
+    <div class="cards" id="summary"></div>
+  </section>
+  <section>
+    <h2>Marked functions</h2>
+    <div id="wall"></div>
+  </section>
+  <section>
+    <h2>Call structure</h2>
+    <div id="rings"></div>
+    <h3>Function data</h3>
+    <div id="functions"></div>
+    <h3>Call graph</h3>
+    <div id="graph"></div>
+  </section>
+  <section>
+    <h2>Line data</h2>
+    <div id="lines"></div>
+  </section>
+  <dialog id="support-dialog" class="support-dialog">
+    <form method="dialog" class="support-card">
+      <header class="support-head">
+        <h2>Support Pyopsy</h2>
+        <button type="submit" class="support-close" aria-label="Close">×</button>
+      </header>
+      <a class="support-qr" href="https://ko-fi.com/alyshmahell" target="_blank" rel="noopener">
+        <img src="/kofi.png" alt="Ko-fi QR code">
+      </a>
+      <a class="support-btn support-sponsor" href="https://github.com/sponsors/AlyShmahell" target="_blank" rel="noopener">Sponsor Me ♥</a>
+      <a class="support-btn" href="https://github.com/AlyShmahell/Pyopsy" target="_blank" rel="noopener">Star Pyopsy ★</a>
+      <a class="support-btn" href="https://github.com/AlyShmahell/Pyopsy/graphs/contributors" target="_blank" rel="noopener">Contributors 👥</a>
+    </form>
+  </dialog>
+  <script src="/page.js"></script>
+</body>
+</html>

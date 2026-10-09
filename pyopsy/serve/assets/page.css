@@ -1,0 +1,206 @@
+:root {
+  color-scheme: dark;
+  --bg: #12141a;
+  --panel: #1b1f2a;
+  --ink: #e8ead6;
+  --muted: #9aa194;
+  --line: #2c3344;
+  --accent: #c6f06c;
+  --hot: #ff7a59;
+  --mid: #6ec8ff;
+  font-family: "IBM Plex Sans", "Segoe UI", sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 2rem 1.25rem 4rem;
+  background: var(--bg);
+  color: var(--ink);
+}
+
+header { margin-bottom: 2rem; }
+
+.mark {
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 0.4rem;
+  font-size: 0.75rem;
+}
+
+h1, h2, h3 { font-family: "IBM Plex Serif", Georgia, serif; font-weight: 600; }
+h1 { font-size: 2.2rem; margin: 0 0 0.4rem; }
+h2 { font-size: 1.35rem; margin: 0 0 0.6rem; }
+h3 { font-size: 1.05rem; margin: 1.2rem 0 0.5rem; }
+p, label { color: var(--muted); line-height: 1.45; }
+
+section {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 1.1rem 1.2rem 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.card {
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 0.85rem 0.9rem;
+}
+
+.card span { display: block; color: var(--muted); font-size: 0.8rem; }
+.card strong { display: block; font-size: 1.15rem; margin-top: 0.3rem; color: var(--ink); }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+  font-size: 0.9rem;
+}
+
+th, td {
+  text-align: left;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 1px solid var(--line);
+  vertical-align: top;
+}
+
+th { color: var(--muted); font-weight: 500; }
+tr.selected td { background: #243018; }
+tr:hover td { background: #232838; cursor: pointer; }
+
+select {
+  background: var(--bg);
+  color: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 0.35rem 0.5rem;
+  margin-left: 0.4rem;
+}
+
+.graph { overflow: auto; }
+.graph svg { display: block; width: 100%; height: auto; }
+.ring-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+.ring-pane h3 { margin-top: 0; }
+.ring-chart { max-width: 520px; }
+.ring-chart svg { display: block; width: 100%; height: auto; }
+#rings g[data-id] { cursor: pointer; }
+.crumb { margin: 0 0 0.75rem; }
+.crumb button {
+  background: none;
+  border: none;
+  color: var(--accent);
+  cursor: pointer;
+  padding: 0;
+  font: inherit;
+}
+.line-src { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.82rem; white-space: pre; }
+.empty { color: var(--muted); }
+
+.support-open {
+  position: fixed;
+  top: 1rem;
+  right: 1.25rem;
+  z-index: 20;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0.25rem;
+}
+
+.support-dialog {
+  border: none;
+  padding: 0;
+  background: transparent;
+  color: var(--ink);
+  max-height: calc(100vh - 2rem);
+}
+
+.support-dialog::backdrop {
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.support-card {
+  width: min(20rem, calc(100vw - 2rem));
+  background: #232734;
+  border-radius: 16px;
+  padding: 0.9rem 1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.45);
+}
+
+.support-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 0 0.2rem;
+}
+
+.support-head h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-family: inherit;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.support-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.4rem;
+  cursor: pointer;
+  line-height: 1;
+  padding: 0 0.15rem;
+}
+
+.support-qr {
+  display: flex;
+  justify-content: center;
+  background: #fff;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+.support-qr img {
+  display: block;
+  width: 100%;
+  max-width: 148px;
+  height: auto;
+}
+
+.support-btn {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 999px;
+  padding: 0.55rem 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  background: #2c3140;
+  border: 1px solid #3a4154;
+}
+
+.support-sponsor {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  color: #fff;
+}
